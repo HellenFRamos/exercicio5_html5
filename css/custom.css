@@ -1,0 +1,188 @@
+/* =========================================================
+   EXERCÍCIO 5 — Layout elaborado com o framework W3.CSS
+   Continuação do Exercício 4: este arquivo carrega DEPOIS do
+   w3.css e aplica a identidade visual do site (verde-floresta
+   + laranja) sobre os componentes do framework, incluindo as
+   tags/classes/ids criados no Exercício 4.
+   ========================================================= */
+
+:root {
+    --cor-fundo: #F4F7F1;
+    --cor-fundo-alt: #E8F0E3;
+    --cor-texto: #1E2A22;
+    --cor-primaria: #1F4B3F;
+    --cor-primaria-clara: #2E6B57;
+    --cor-destaque: #E0662E;
+    --cor-destaque-escura: #C4551F;
+    --cor-creme: #FBF8F1;
+    --cor-linha: #CBD8C2;
+    --fonte-titulo: "Fraunces", Georgia, serif;
+    --fonte-corpo: "Work Sans", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: var(--fonte-corpo);
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulo);
+    font-weight: 600;
+}
+
+/* Tags redefinidas no Exercício 4, mantidas aqui */
+blockquote {
+    margin: 20px 0;
+    padding: 14px 20px;
+    background-color: var(--cor-fundo-alt);
+    border-left: 4px solid var(--cor-primaria);
+    font-style: italic;
+    color: var(--cor-primaria);
+}
+
+hr {
+    border: none;
+    border-top: 1px dashed var(--cor-linha);
+    margin: 24px 0;
+}
+
+code {
+    font-family: "Courier New", monospace;
+    background-color: var(--cor-fundo-alt);
+    color: var(--cor-primaria);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+mark {
+    background-color: #FFF1CE;
+    color: var(--cor-texto);
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+
+.ufo {
+    font-family: "Courier New", monospace;
+    font-size: 0.95rem;
+    color: var(--cor-creme);
+    background-color: var(--cor-primaria);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Hero (cabeçalho) */
+.hero {
+    background: linear-gradient(155deg, var(--cor-primaria) 0%, var(--cor-primaria-clara) 100%);
+    color: var(--cor-creme);
+}
+
+.hero img {
+    max-width: 460px;
+    box-shadow: 0 16px 30px -14px rgba(0, 0, 0, 0.45);
+}
+
+.selo-novo {
+    display: inline-block;
+    background-color: var(--cor-destaque);
+    color: var(--cor-creme);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Barra de navegação fixa */
+.barra-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: var(--cor-creme) !important;
+    border-bottom: 1px solid var(--cor-linha);
+}
+
+.barra-nav a {
+    color: var(--cor-primaria) !important;
+    font-weight: 600;
+}
+
+.barra-nav a:hover {
+    background-color: var(--cor-fundo-alt) !important;
+}
+
+/* Conteúdo */
+.w3-content h2 {
+    color: var(--cor-primaria);
+    border-left: 5px solid var(--cor-destaque);
+    padding-left: 14px;
+}
+
+.w3-content h3 {
+    color: var(--cor-primaria-clara);
+}
+
+/* Cards (classe .card criada no Exercício 4) */
+.card {
+    border-radius: 10px !important;
+    border: 1px solid var(--cor-linha) !important;
+}
+
+.card-destaque {
+    border-left: 5px solid var(--cor-destaque) !important;
+}
+
+/* Id #imc criado no Exercício 4 */
+#imc {
+    background-color: var(--cor-fundo-alt);
+    border-radius: 10px;
+}
+
+/* Tabela (classe .tabela-fit criada no Exercício 4) */
+.tabela-fit th {
+    background-color: var(--cor-primaria) !important;
+    color: var(--cor-creme) !important;
+}
+
+.tabela-fit tr:nth-child(even) {
+    background-color: var(--cor-fundo-alt);
+}
+
+/* Formulário (classe .btn-cta criada no Exercício 4) */
+.painel-form label {
+    font-weight: 600;
+    margin-top: 12px;
+    display: block;
+}
+
+.btn-cta {
+    background-color: var(--cor-destaque) !important;
+    color: #FFFFFF !important;
+    border-radius: 999px !important;
+    font-weight: 700;
+    box-shadow: 0 8px 18px -8px rgba(224, 102, 46, 0.6);
+    letter-spacing: 0.3px;
+}
+
+.btn-cta:hover {
+    background-color: var(--cor-destaque-escura) !important;
+}
+
+input[type="range"] {
+    accent-color: var(--cor-destaque);
+}
+
+/* Gráficos e mídia */
+canvas, svg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor-primaria);
+    color: var(--cor-creme);
+}
